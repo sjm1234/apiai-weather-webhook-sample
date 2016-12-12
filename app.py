@@ -27,7 +27,7 @@ def webhook():
     
 
     res = {
-        "speech": "yes I'm here too 12",
+        "speech": response,
         "displayText": "yes I'm here too",
         # "data": data,
         # "contextOut": [],
