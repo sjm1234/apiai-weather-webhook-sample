@@ -20,12 +20,14 @@ def webhook():
     print(json.dumps(req, indent=4))
     
   
-    url = "http://maps.googleapis.com/maps/api/geocode/json?address=google"
+    url = "https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=1"
     response = urllib.urlopen(url)
     data = json.loads(response.read())
+    
+    
 
     res = {
-        "speech": "yes I'm here too 8",
+        "speech": "yes I'm here too 9",
         "displayText": "yes I'm here too",
         # "data": data,
         # "contextOut": [],
