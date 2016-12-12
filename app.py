@@ -32,12 +32,12 @@ def processRequest(req):
     if req.get("result").get("action") != "yahooWeatherForecast":
         return {}
     baseurl = "https://query.yahooapis.com/v1/public/yql?"
-    #baseurl = "https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=10"
+    baseurl2 = "https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=10"
     yql_query = makeYqlQuery(req)
     if yql_query is None:
         return {}
     yql_url = baseurl + urllib.urlencode({'q': yql_query}) + "&format=json"
-    result = urllib.urlopen(yql_url).read()
+    result = urllib.urlopen(baseurl2).read()
     data = json.loads(result)
     res = makeWebhookResult(data)
     return res
