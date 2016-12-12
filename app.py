@@ -31,7 +31,8 @@ def webhook():
 def processRequest(req):
     if req.get("result").get("action") != "yahooWeatherForecast":
         return {}
-    baseurl = "https://query.yahooapis.com/v1/public/yql?"
+    #baseurl = "https://query.yahooapis.com/v1/public/yql?"
+    baseurl = "https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=10"
     yql_query = makeYqlQuery(req)
     if yql_query is None:
         return {}
