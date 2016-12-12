@@ -26,12 +26,12 @@ def webhook():
     
     req = urllib2.Request('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=1')
     response = urllib2.urlopen(req)
-    the_page = response.read()
+    #the_page = response.read()
     
     
 
     res = {
-        "speech": "Hello 2",
+        "speech": "Hello 3",
         "displayText": "yes I'm here too",
         # "data": data,
         # "contextOut": [],
