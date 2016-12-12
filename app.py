@@ -22,12 +22,12 @@ def webhook():
   
     url = "https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=1"
     response = urllib.urlopen(url)
-    planeData = json.loads(response.read())
+    #planeData = json.loads(response.read())
     
     
 
     res = {
-        "speech": "yes I'm here too 11",
+        "speech": "yes I'm here too 12",
         "displayText": "yes I'm here too",
         # "data": data,
         # "contextOut": [],
