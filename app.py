@@ -36,7 +36,7 @@ def processRequest(req):
     yql_query = makeYqlQuery(req)
     if yql_query is None:
         return {}
-    yql_url = baseurl + urllib.urlencode({'q': yql_query}) + "&format=json"
+    #yql_url = baseurl + urllib.urlencode({'q': yql_query}) + "&format=json"
     result = urllib.urlopen(baseurl2).read()
     data = json.loads(result)
     res = makeWebhookResult(data)
@@ -54,20 +54,20 @@ def makeYqlQuery(req):
 
 
 def makeWebhookResult(data):
-    query = data.get('acList')
-    if query is None:
-        return {}
+   # query = data.get('acList')
+   # if query is None:
+   #     return {}
 
-    result = query.get('From')
-    if result is None:
-        return {}
+   # result = query.get('From')
+   # if result is None:
+   #     return {}
 
 
     
 
     # print(json.dumps(item, indent=4))
 
-    speech = "Simon is great yes. plane is from " + result
+    speech = "Simon is great yes. plane is from " #+ result
 
     print("Response:")
     print(speech)
