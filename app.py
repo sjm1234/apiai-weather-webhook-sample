@@ -19,7 +19,10 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
     
-   
+  
+    url = "http://maps.googleapis.com/maps/api/geocode/json?address=google"
+    #response = urllib.urlopen(url)
+    #data = json.loads(response.read())
 
     res = {
         "speech": "yes I'm here too",
