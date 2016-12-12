@@ -22,10 +22,10 @@ def webhook():
   
     url = "http://maps.googleapis.com/maps/api/geocode/json?address=google"
     response = urllib.urlopen(url)
-    #data = json.loads(response.read())
+    data = json.loads(response.read())
 
     res = {
-        "speech": "yes I'm here too",
+        "speech": "yes I'm here too 8",
         "displayText": "yes I'm here too",
         # "data": data,
         # "contextOut": [],
