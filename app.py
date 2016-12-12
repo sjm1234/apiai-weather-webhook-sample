@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import urllib
+import urllib2
 import json
 import os
 
@@ -20,14 +20,18 @@ def webhook():
     print(json.dumps(req, indent=4))
     
   
-    url = "https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=1"
-    response = urllib.urlopen(url)
+    #url = "https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=1"
+    #response = urllib.urlopen(url)
     #planeData = json.loads(response.read())
+    
+    req = urllib2.Request('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=1')
+    response = urllib2.urlopen(req)
+    the_page = response.read()
     
     
 
     res = {
-        "speech": "Hello 1",
+        "speech": "Hello 2",
         "displayText": "yes I'm here too",
         # "data": data,
         # "contextOut": [],
