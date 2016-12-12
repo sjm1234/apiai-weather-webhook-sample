@@ -19,9 +19,7 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
     
-   url = "https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=10"
-   response = urllib.urlopen(url)
-   data = json.loads(response.read())
+   
 
     res = {
         "speech": "yes I'm here too",
