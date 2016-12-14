@@ -32,7 +32,7 @@ def webhook():
     res = {
         "speech": "Response 19",
         "displayText": "yes I'm here too",
-        "data": {simon: "yes"},
+        "data": [simon: "yes"],
         # "contextOut": [],
         "source": "apiai-weather-webhook-sample"
     }
