@@ -35,7 +35,7 @@ def webhook():
     #planedata = json.loads(readdata)
     
     #sampletext = planedata["totalAc"]
-    speech = "Today in 5"# + str(sampletext)
+    speech = "Today in 6" + str(readdata)
 
     res = {
         "speech": speech,
