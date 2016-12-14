@@ -31,7 +31,7 @@ def webhook():
         
 
     res = {
-        "speech": planedata["foo"]["bar"][0],
+        "speech": "Simon 1",
         "displayText": "yes I'm here too",
         
         #"data": [simon: "yes"],
