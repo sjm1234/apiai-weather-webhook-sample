@@ -38,7 +38,7 @@ def webhook():
         
 
     res = {
-        "speech": "neil" + " 4",
+        "speech": "neil 4",
         "displayText": "yes I'm here too",
         
         #"data": [simon: "yes"],
