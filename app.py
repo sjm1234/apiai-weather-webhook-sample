@@ -31,7 +31,7 @@ def webhook():
     readdata = reqq.read()
     
     planedata = json.loads('{"first_name": "Guido", "last_name":"Rossum"}')
-    planedataa = json.loads(readdata)
+    #planedataa = json.loads(readdata)
     
     sampletext = planedata['first_name']
         
