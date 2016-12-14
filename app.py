@@ -33,7 +33,7 @@ def webhook():
         
 
     res = {
-        "speech": "Simon 2",
+        "speech": sampletext,
         "displayText": "yes I'm here too",
         
         #"data": [simon: "yes"],
