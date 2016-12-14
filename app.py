@@ -20,8 +20,8 @@ def webhook():
     print(json.dumps(req, indent=4))
     
   
-    #url = "https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=1"
-    #response = urllib.urlopen(url)
+    url = "https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=1"
+    response = urllib.urlopen(url)
     #planeData = json.loads(response.read())
     
     #req = urllib2.Request('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=1')
@@ -32,7 +32,7 @@ def webhook():
     
 
     res = {
-        "speech": "Hello 10",
+        "speech": "Hello 11",
         "displayText": "yes I'm here too",
         # "data": data,
         # "contextOut": [],
