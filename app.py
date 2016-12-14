@@ -34,11 +34,11 @@ def webhook():
     
     
    # sampletext = planedata['src']
-    # sampletext = "Bob"
+     sampletext = "Bob"
         
 
     res = {
-        "speech": "Hi Simon",
+        "speech": sampletext,
         "displayText": "yes I'm here too",
         
         #"data": [simon: "yes"],
