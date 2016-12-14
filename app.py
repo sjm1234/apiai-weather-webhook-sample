@@ -27,7 +27,7 @@ def webhook():
     
 
     
-    reqq = urllib.urlopen('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=10')
+    reqq = urllib.urlopen('http://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=10')
     
     readdata = reqq.read()
     
@@ -35,7 +35,7 @@ def webhook():
     #planedata = json.loads(readdata)
     
     #sampletext = planedata["totalAc"]
-    speech = "Today in 6" + str(readdata)
+    speech = "Today in 7" + str(readdata)
 
     res = {
         "speech": speech,
