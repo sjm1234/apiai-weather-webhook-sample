@@ -31,7 +31,7 @@ def webhook():
     readdata = reqq.read()
     
     planedata = json.loads('{"src":1,"feeds":[{"id":1,"name":"From Consolidator","polarPlot":false}],"srcFeed":1,"showSil":true,"showFlg":true,"showPic":true,"flgH":20,"flgW":85,"acList":[],"totalAc":3292,"lastDv":"636172813226560026","shtTrlSec":65,"stm":1481692022571}')
-    
+    sampletext = planedata["src"]
     speech = "Today in"
 
     res = {
