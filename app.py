@@ -27,12 +27,14 @@ def webhook():
 
     
     reqq = urllib.urlopen('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=1')
-    #planeData = json.loads(reqq.read())
+    planedata = json.loads('["foo", {"bar":["baz", null, 1.0, 2]}]')
+        
 
     res = {
         "speech": "Response 19",
         "displayText": "yes I'm here too",
-        "data": [simon: "yes"],
+        
+        #"data": [simon: "yes"],
         # "contextOut": [],
         "source": "apiai-weather-webhook-sample"
     }
