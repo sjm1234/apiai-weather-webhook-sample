@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 #from urllib2 import Request, urlopen, URLError
-import requests
+#import requests
+import urlib
 import json
 import os
 
