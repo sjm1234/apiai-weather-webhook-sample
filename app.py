@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-import urllib.request
-from urllib.error import HTTPError
+import urllib
 import json
 import os
 
@@ -29,16 +28,7 @@ def webhook():
     #respoe = urllib2.urlopen(req)
     #the_page = response4.read()
     
-    try:
 
-    #url_address ='https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=-33.818961&lng=151.105809&fDstL=0&fDstU=1'
-    #with urllib.request.urlopen(url_address) as url:
-        #data = json.loads(url.read())
-        #print(data)
-
-    except HTTPError as ex:
-        #print(ex.read())
-    
     
 
     res = {
