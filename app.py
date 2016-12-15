@@ -44,9 +44,11 @@ def webhook():
 
     # Send HTTP POST request
     request_args = urllib2.Request('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json')
+    #resp = urllib2.urlopen(req)
+    #request_args = urllib2.Request('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json')
     
     
-    speech = "Today in 2"# + str(sampletext)
+    speech = "Today in 3"# + str(sampletext)
 
     res = {
         "speech": speech,
