@@ -66,7 +66,7 @@ def webhook():
             
             
             
-        speech = "There are " + str(len(planedata["acList"])) + " aircraft within " + str(length) + "km. It is " + str(planedata["acList"][0]["Op"]) + " flight from " + str(planedata["acList"][0]["From"])
+        speech = "There are " + str(len(planedata["acList"])) + " aircraft within " + str(length) + "km. The closest is " + str(planedata["acList"][x]["Op"]) + " flight from " + str(planedata["acList"][x]["From"])
     else:
         speech = "No planes are nearby"
     
