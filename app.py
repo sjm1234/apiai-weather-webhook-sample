@@ -18,7 +18,7 @@ def webhook():
     req = request.get_json(silent=True, force=True)
     
     result = req.get("result")
-    #parameters = result.get("parameters")
+    parameters = result.get("parameters")
     #pw = parameters.get("planesWithin")
 
     print("Request:")
