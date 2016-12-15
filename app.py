@@ -19,7 +19,7 @@ def webhook():
     
     result = req.get("result")
     parameters = result.get("parameters")
-    length = parameters.get("planesWithin")
+    length = parameters.get("number")
     
 
     print("Request:")
