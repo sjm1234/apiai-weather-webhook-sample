@@ -51,8 +51,8 @@ def webhook():
     r = requests.get('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?', params=payload)
     planedata = json.loads(r.text)
     
-    speech = "There are " + str(len(planedata["totalAc"])) + " aircraft within 20km"
-
+    speech = "There are " + str(len(planedata["acList"])) + " aircraft within 20km"
+    #speech = "There are " + str(planedata["totalAc"])) + " aircraft within 20km"
     res = {
         "speech": speech,
         "displayText": speech,
