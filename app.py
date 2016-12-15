@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import urllib
-from urllib2 import Request, urlopen, URLError
+import requests
 import json
 import os
 
@@ -48,7 +48,7 @@ def webhook():
     #request_args = urllib2.Request('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json')
     
     
-    speech = "Today in 3"# + str(sampletext)
+    speech = "Today in 4"# + str(sampletext)
 
     res = {
         "speech": speech,
