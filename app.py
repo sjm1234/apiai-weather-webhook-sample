@@ -50,7 +50,7 @@ def webhook():
     payload = {'lat': '-33.818961', 'lng': '151.105809', 'fDstL': '0', 'fDstU': '10'}
     r = requests.get('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?', params=payload)
     
-    speech = "Today in 9 " + str(r.url)
+    speech = "Today in 9 " + str(r.json())
 
     res = {
         "speech": speech,
