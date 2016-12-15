@@ -43,7 +43,7 @@ def webhook():
     data_args = urllib.urlencode(query_args)
 
     # Send HTTP POST request
-    request_args = urllib2.Request('http://public-api.adsbexchange.com/VirtualRadar/AircraftList.json')
+    #request_args = urllib2.Request('http://public-api.adsbexchange.com/VirtualRadar/AircraftList.json')
     #resp = urllib2.urlopen(req)
     #request_args = urllib2.Request('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json')
     
