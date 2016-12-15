@@ -47,11 +47,11 @@ def webhook():
     #resp = urllib2.urlopen(req)
     #request_args = urllib2.Request('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json')
     
-    payload = {'lat': '-33.818961', 'lng': '151.105809', 'fDstL': '0', 'fDstU': '10'}
+    payload = {'lat': '-33.818961', 'lng': '151.105809', 'fDstL': '0', 'fDstU': '20'}
     r = requests.get('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?', params=payload)
     planedata = json.loads(r.text)
     
-    speech = "Today in 11 " + str(planedata["totalAc"])
+    speech = "There are " + str(len(planedata["totalAc"])) + " aircraft within 20km"
 
     res = {
         "speech": speech,
