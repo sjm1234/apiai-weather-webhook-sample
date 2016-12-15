@@ -55,11 +55,11 @@ def webhook():
     payload = {'lat': '-33.818961', 'lng': '151.105809', 'fDstL': '0', 'fDstU': length}
     r = requests.get('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?', params=payload)
     planedata = json.loads(r.text)
-    
+    speech = "";
     if len(planedata["acList"]):
-    speech = "There are " + str(len(planedata["acList"])) + " aircraft within " + str(length) + "km. It is " + str(planedata["acList"][0]["Op"]) + " flight from " + str(planedata["acList"][0]["From"])
+        speech = "There are " + str(len(planedata["acList"])) + " aircraft within " + str(length) + "km. It is " + str(planedata["acList"][0]["Op"]) + " flight from " + str(planedata["acList"][0]["From"])
     else:
-    speech = "No planes are nearby"
+        speech = "No planes are nearby"
     
         #str(planedata["acList"][0]["Op"]) + " flight from " + str(planedata["acList"][0]["From"]) + 
        # " to " + str(planedata["acList"][0]["To"]) + "."
