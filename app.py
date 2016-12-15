@@ -16,6 +16,10 @@ app = Flask(__name__)
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
+    
+    result = req.get("result")
+    parameters = result.get("parameters")
+    pw = parameters.get("planesWithin")
 
     print("Request:")
     print(json.dumps(req, indent=4))
@@ -51,7 +55,7 @@ def webhook():
     r = requests.get('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?', params=payload)
     planedata = json.loads(r.text)
     
-    speech = "There are " + str(len(planedata["acList"])) + " aircraft within 20km"
+    speech = "There are " + str(len(planedata["acList"])) + " aircraft within 20km" + str(pw[0])
     #speech = "There are " + str(planedata["totalAc"])) + " aircraft within 20km"
     res = {
         "speech": speech,
