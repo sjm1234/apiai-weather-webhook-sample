@@ -20,6 +20,7 @@ def webhook():
     result = req.get("result")
     parameters = result.get("parameters")
     pw = parameters.get("planesWithin")
+    length = pw.get("amount")
 
     print("Request:")
     print(json.dumps(req, indent=4))
