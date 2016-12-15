@@ -58,7 +58,12 @@ def webhook():
     speech = "";
     if len(planedata["acList"]):
         
-        #for index in range(len(planedata["acList"])):
+        low = planedata["acList"][0]["Dst"]
+        place = 0
+        for x in range(0, len(planedata["acList"])):
+            if planedata["acList"][x]["Dst"] < low:
+                place = x
+            
             
             
         speech = "There are " + str(len(planedata["acList"])) + " aircraft within " + str(length) + "km. It is " + str(planedata["acList"][0]["Op"]) + " flight from " + str(planedata["acList"][0]["From"])
